@@ -4,12 +4,23 @@ from images.models import Image
 # - file format allowed
 # - validate size no larger than 5MB
 class ImageSerializer(serializers.ModelSerializer):
+    url = serializers.ImageField(source='image')
+
+    class Meta:
+        model = Image
+        fields = (
+            'id',
+            'title',
+            'url',
+            'width',
+            'height',
+        )
+
+class ImageCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
         fields = (
             'id',
             'title',
             'image',
-            'width',
-            'height',
         )

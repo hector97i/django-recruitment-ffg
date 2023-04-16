@@ -116,9 +116,10 @@ ROOT_URLCONF = 'image_app.urls'
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Images API v1',
-    'DESCRIPTION': '',
+    'DESCRIPTION': 'Django/DRF REST API for uploading and serving images',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }

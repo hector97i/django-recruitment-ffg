@@ -2,7 +2,7 @@
 name = "django-recruitment-ffg"
 version = "0.1.0"
 description = "REST API for uploading and serving images"
-authors = ["images.Hector Duran <dany0997@gmail.com>"]
+authors = ["Hector Duran <dany0997@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -20,6 +20,13 @@ flake8 = "^6.0.0"
 isort = "^5.12.0"
 coverage = "^7.2.3"
 bumpversion = "^0.6.0"
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 120
+lines_after_imports = 1
+multi_line_output = 3
+skip = "migrations"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
