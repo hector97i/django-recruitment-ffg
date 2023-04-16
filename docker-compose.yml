@@ -19,7 +19,7 @@ services:
       - postgres
     build: .
     ports:
-      - "80:80"
+      - "8000:8000"
 
 volumes:
   postgres-db:
