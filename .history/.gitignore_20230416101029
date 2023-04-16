@@ -130,6 +130,4 @@ dmypy.json
 
 # config
 config*.json
-
-# dev db
 db.sqlite3

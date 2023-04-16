@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "django-recruitment-ffg"
+version = "0.1.0"
+description = "REST API for uploading and serving"
+authors = ["images.Hector Duran <dany0997@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.2"
+djangorestframework = "^3.14.0"
+psycopg2-binary = "^2.9.6"
+boto3 = "^1.26.114"
+Pillow = "^9.5.0"
+pytest = "^7.3.1"
+django-storages = "^1.13.2"
+drf-spectacular = "^0.26.2"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+coverage = "^7.2.3"
+bumpversion = "^0.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
