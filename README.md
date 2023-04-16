@@ -3,6 +3,10 @@ Django/DRF REST API for uploading and serving images
 
 [![Pytest](https://github.com/hector97i/django-recruitment-ffg/actions/workflows/pytest.yml/badge.svg)](https://github.com/hector97i/django-recruitment-ffg/actions/workflows/pytest.yml)
 
+## Demo
+
+You can access the [Swagger Docs](http://ec2-18-117-193-149.us-east-2.compute.amazonaws.com/api/swagger) and a demo application [here](http://ec2-18-117-193-149.us-east-2.compute.amazonaws.com)
+
 ## Installation
 
 This project uses `poetry` to manage dependencies and other project functionalities.
