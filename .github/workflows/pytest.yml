@@ -51,5 +51,4 @@ jobs:
           poetry install
       - name: Run tests
         run: |
-          poetry run tests:ci
-          poetry run coverage report
+          ./.venv/bin/pytest
