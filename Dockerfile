@@ -8,7 +8,8 @@ RUN apt update
 RUN apt install gcc -y
 RUN pip install 'poetry==1.3.1'
 
-COPY pyproject.toml poetry.lock .
+COPY pyproject.toml .
+COPY poetry.lock .
 RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
