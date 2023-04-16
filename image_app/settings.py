@@ -6,7 +6,7 @@ import os
 import sys
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 VALID_RDBMS = ('sqlite3', 'postgresql')
 CONFIG_FILE = os.getenv('CONFIG', 'config.json')
@@ -115,6 +115,7 @@ ROOT_URLCONF = 'image_app.urls'
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_PAGINATION_CLASS': 'api.pagination.BasePagination',
 }
 
 SPECTACULAR_SETTINGS = {
@@ -195,9 +196,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 os.environ['AWS_DEFAULT_REGION'] = CONFIG['AWS']['REGION_NAME']
 os.environ['AWS_ACCESS_KEY_ID'] = CONFIG['AWS']['ACCESS_KEY_ID']
 os.environ['AWS_SECRET_ACCESS_KEY'] = CONFIG['AWS']['SECRET_ACCESS_KEY']
+STORAGES = {
+    'default': {'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage'},
+    "staticfiles": {"BACKEND": "storages.backends.s3boto3.S3StaticStorage"},
+}
 # aws
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 AWS_ACCESS_KEY_ID = CONFIG['AWS']['ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = CONFIG['AWS']['SECRET_ACCESS_KEY']
 AWS_S3_REGION_NAME = CONFIG['AWS']['REGION_NAME']

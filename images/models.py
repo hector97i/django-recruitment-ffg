@@ -27,6 +27,7 @@ class Image(models.Model):
     def resize_image(image, width, height):
         # There are 2 situations: the file is smaller than or greater than 2.5MB
         # https://docs.djangoproject.com/en/3.2/topics/http/file-uploads/#where-uploaded-data-is-stored
+        # credits to https://stackoverflow.com/a/68601732 for base answer
 
         new_size = (int(width), int(height))
         if isinstance(image, InMemoryUploadedFile):
