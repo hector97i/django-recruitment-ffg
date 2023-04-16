@@ -34,7 +34,7 @@ class ImageViewSet(viewsets.ModelViewSet):
         desired_height = request.query_params.get('height')
 
         if not desired_height and not desired_width:
-            # no resizing
+            # no resizing, save immediately
             img_obj = serializer.save()
             return Response(data=ImageSerializer(img_obj).data, status=status.HTTP_201_CREATED)
 
