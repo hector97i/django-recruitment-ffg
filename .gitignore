@@ -133,3 +133,7 @@ config*.json
 
 # dev db
 db.sqlite3
+
+# other
+.history
+.vscode
