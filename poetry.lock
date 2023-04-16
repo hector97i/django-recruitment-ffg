@@ -187,6 +187,20 @@ pycodestyle = ">=2.10.0,<2.11.0"
 pyflakes = ">=3.0.0,<3.1.0"
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "inflection"
 version = "0.5.1"
 description = "A port of Ruby on Rails inflector to Python"
@@ -444,7 +458,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.11"
-content-hash = "fd06aba8f26bd3bc9b035a0cdfb538af77a43507421a18cfb3e23a37ffeef6b7"
+content-hash = "74b4338be553a6788732b8b2f181eb52974e620d39d085c8cbe4b7d03b4fc4d9"
 
 [metadata.files]
 asgiref = []
@@ -461,6 +475,7 @@ djangorestframework = []
 drf-spectacular = []
 exceptiongroup = []
 flake8 = []
+gunicorn = []
 inflection = []
 iniconfig = []
 isort = []

@@ -1,4 +1,4 @@
 #!/bin/bash
-python src/manage.py migrate
-python src/manage.py collectstatic --noinput
-gunicorn -c config/gunicorn/conf.py --bind :8000 --chdir src ecg_auto.asgi:application
+python manage.py migrate
+python manage.py collectstatic --no-input
+gunicorn -c config/gunicorn/conf.py --reload --bind :80  image_app.wsgi:application
