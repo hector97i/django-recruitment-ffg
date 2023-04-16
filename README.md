@@ -1,6 +1,8 @@
 # django-recruitment-ffg
 Django/DRF REST API for uploading and serving images
 
+[![Pytest](https://github.com/hector97i/django-recruitment-ffg/actions/workflows/pytest.yml/badge.svg)](https://github.com/hector97i/django-recruitment-ffg/actions/workflows/pytest.yml)
+
 ## Installation
 
 This project uses `poetry` to manage dependencies and other project functionalities.
