@@ -1,5 +1,5 @@
 # django-recruitment-ffg
-Django/DRF REST API for uploading and serving images
+Django/DRF REST API for uploading, resizing and serving images
 
 [![Pytest](https://github.com/hector97i/django-recruitment-ffg/actions/workflows/pytest.yml/badge.svg)](https://github.com/hector97i/django-recruitment-ffg/actions/workflows/pytest.yml)
 
