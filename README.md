@@ -27,7 +27,7 @@ This project uses `poetry` to manage dependencies and other project functionalit
     source .venv/bin/activate
     ```
 
-3. Configure project by creating a `config.json` file in the root of the project using this structure:
+3. Declare settings for the project by creating a `config.json` file in the root of the project using this structure:
     ```json
     {
         "ENVIRONMENT": "DEVELOPMENT", // environment to run in
